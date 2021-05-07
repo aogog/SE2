@@ -52,7 +52,7 @@ git branch <이름> 으로 실행하면 해당 이름을 가진 branch를 생성
 이제 P2의 입장에서 해당 프로젝트를 진행한다고 가정한다. 위 그림처럼
 `git checkout P2`명령어를 통해 P2 branch로 작업 환경을 변경한다.
 
-P2의 분야는 7~16번 기능이므로, `new.md`파일에 7~16번 파일을 추가한다. 이 때, P2는 한번에 7~16번 기능을 모두 완료한 후, github에 push 했다고 가정한다.
+P2의 분야는 7-16번 기능이므로, `new.md`파일에 7-16번 파일을 추가한다. 이 때, P2는 한번에 7-16번 기능을 모두 완료한 후, github에 push 했다고 가정한다.
 ![pushp2](./2/pushp2.png "pushp2")
 위 그림처럼, `new.md`파일을 수정 한 후, `git add -A` 명령어를 수행하여 변경된 파일을 모두 추가한 다음, commit 을 남겨준 뒤, `git push origin P2`명령어를 통해 로컬저장소에 있는 P2 branch의 파일들을 github에 전송한다.
 
@@ -65,7 +65,7 @@ P2의 입장에서 자신의 할 일을 모두 완료했으니 main과 합치는
 따라서 아무런 제약없이 main과 merge가 되는 것을 볼 수 있다.
 * * *
 P2가 작업을 끝낸 뒤, P3가 자신이 맡은 분야를 수행하기 시작했다.
-P2와 마찬가지로 P3도 한번에 자신이 맡은 분야 17~23번 기능을 추가했다. 따라서, P2와 마찬가지로 `git add -A` 명령어 수행 후, commit를 남긴 다음, `git push origin P3` 명령어 수행을 통해 자신이 한 작업을 github에 추가한다.
+P2와 마찬가지로 P3도 한번에 자신이 맡은 분야 17-23번 기능을 추가했다. 따라서, P2와 마찬가지로 `git add -A` 명령어 수행 후, commit를 남긴 다음, `git push origin P3` 명령어 수행을 통해 자신이 한 작업을 github에 추가한다.
 
 이 때, P3는 main에서는 `new.md`를 수정하지 않았지만, 이미 P2가 main과 merge한 상태이므로, P3는 main의 `new.md`를 수정했다고 보면된다.
 따라서 위의 P2가 main과 merge하는 상황과는 다르게 conflict가 아래의 그림처럼 발생한다.
@@ -78,9 +78,9 @@ P2와 마찬가지로 P3도 한번에 자신이 맡은 분야 17~23번 기능을
 ![mergep2p3](./2/mergep2p3.png "p2p3")
 ***
 ### 7. git rebase & log
-P2와 P3가 모든 작업을 완료 한 후, P1(1~6)이 프로젝트를 시작했다.
+P2와 P3가 모든 작업을 완료 한 후, P1(1-6)이 프로젝트를 시작했다.
 P2,P3의 때와 마찬가지로, 자신이 맡은 부분을 작업 한 후, add 및 commit를 수행한다.
-하지만 P1은 P2,P3와는 다르게 해당 프로젝트를 여러번에 걸쳐 진행했다. 즉, 첫번째 commit에서는 1~4번 기능을, 두번째 commit에서는 5번기능을 추가했고, 세번째 commit에서는 추가했던 5번 기능을 수정했고, 마지막 네번째 commit에서는 5번과 6번을 추가했다.
+하지만 P1은 P2,P3와는 다르게 해당 프로젝트를 여러번에 걸쳐 진행했다. 즉, 첫번째 commit에서는 1-4번 기능을, 두번째 commit에서는 5번기능을 추가했고, 세번째 commit에서는 추가했던 5번 기능을 수정했고, 마지막 네번째 commit에서는 5번과 6번을 추가했다.
 즉, P1은 4번의 add와 4번의 commit를 실행하여 자신이 맡은 부분을 완성했다.
 P1이 단순히 push를 실행하면, P1의 commit history에는 4번의 commit가 추가되겠지만, 여러명이 함께하는 프로젝트에서 중요하지 않은 commit는 없애는 것이 가독성이 좋기때문에 P1은 해당 commit를 하나의 commit로 만들기 위해 `rebase` 명령어를 실행하기로 했다.
 
@@ -93,11 +93,11 @@ P1이 단순히 push를 실행하면, P1의 commit history에는 4번의 commit�
 ![rebase2](./2/rebase2.png "rb2")
 위 그림을 보면, 4번의 pick가 등장한다.
 그림에서 알 수 있듯이 pick,reword,edit,squash 등 여러가지 command가 있다.
-이 중에서, P1은 4개의 commit를 하나의 commit로 합치기 위해, 맨 위의 commit를 reword command를 이용하여 add 1~6으로 변경하고,
+이 중에서, P1은 4개의 commit를 하나의 commit로 합치기 위해, 맨 위의 commit를 reword command를 이용하여 add 1-6으로 변경하고,
 나머지 commit는 squash command를 이용하기로했다.
 위 설명처럼 진행하고 Exit를 하면, 다음과 같은 그림이 등장한다.
 ![rebase3](./2/rebase3.png "rb3")
-위 그림은, 사용자가 나타내려고 하는 통합된 commit를 작성할 수 있는 화면이다. 위 그림에서 add 1~4를 add 1~6으로 수정해주면, 통합된 commit의 설명은 add 1~6으로 수정된다.
+위 그림은, 사용자가 나타내려고 하는 통합된 commit를 작성할 수 있는 화면이다. 위 그림에서 add 1-4를 add 1-6으로 수정해주면, 통합된 commit의 설명은 add 1-6으로 수정된다.
 ![rebase4](./2/rebase4.png "rb4")
 위 그림처럼 진행되는데, 여기서 통합된 commit에 대한 설명들을 작성할 수 있다.
 위 과정을 모두 마치고 Exit를 실행하면, 아래와 같은 그림이 나오면서 rebase가 완료된다.
