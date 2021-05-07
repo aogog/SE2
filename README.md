@@ -37,9 +37,7 @@ main 에서는 프로젝트의 목차에 해당하는 Order만을 추가 한 후
 이 때, commit에 접근할 수 있는 방법중 하나인, hash가 있지만, `tag`명령어를 사용하면 더 쉽게 commit에 접근할 수 있다.
 tag 추가방법은 commit와 유사한데, 아래의 그림처럼 `git tag <태그명>`처럼 태그를 추가하고, commit한 뒤 push를 해주어, tag를 달 수 있다.
 ![tag](https://user-images.githubusercontent.com/33886018/117474323-c8df5700-af95-11eb-92b6-4b06bd24aae0.png)
-![branch1](https://user-images.githubusercontent.com/33886018/117474334-cbda4780-af95-11eb-826c-06c676a9861b.png)
-위 그림을 2번 반복하여 P1,P2,P3 branch를 만든다.
-즉, P1,P2,P3,main 에는 Order정보만을 갖고있는 new.md가 생성된 상태이다.
+
 
 대부분 수정 후 add 및 commit명령어를 수행하지만, 해당 branch의 상태를 알고 싶을 때 `git status`명령어를 사용하면 아래의 그림처럼 해당 branch에서 수정된 파일이 있는지 확인할 수 있다.
 ![status](https://user-images.githubusercontent.com/33886018/117474417-d694dc80-af95-11eb-8639-b37a13ae73b8.png)
@@ -48,6 +46,9 @@ tag 추가방법은 commit와 유사한데, 아래의 그림처럼 `git tag <태
 
 git branch <이름> 으로 실행하면 해당 이름을 가진 branch를 생성하고, 단순히 git branch 를 실행하면 현재 branch 및 현재 작업 branch(*)를 보여주고 checkout <이름> 명령어는 branch를 해당 branch로 이동시켜주는 명령어이다.
 ![branch](https://user-images.githubusercontent.com/33886018/117474336-cbda4780-af95-11eb-9be3-6cd7e085ad33.png)
+![branch1](https://user-images.githubusercontent.com/33886018/117474334-cbda4780-af95-11eb-826c-06c676a9861b.png)
+해당 프로젝트는 3인 프로젝트로 가정한다. 위 그림을 2번 반복하여 P1,P2,P3 branch를 만든다.
+즉, P1,P2,P3,main 에는 Order정보만을 갖고있는 new.md가 생성된 상태이다.
 ***  
 이제 P2의 입장에서 해당 프로젝트를 진행한다고 가정한다. 위 그림처럼
 `git checkout P2`명령어를 통해 P2 branch로 작업 환경을 변경한다.
