@@ -139,7 +139,7 @@ github의 상황은 아래와 같다
 ***
 | Command | Use |Link |
 | ---|---|---|
-| Add | O | https://github.com/aogog/SE2/commit/bbd845ff6c862b67a2044c64396101956d5370ba|
+| Add | O | .md파일 4번째 설명|
 | Branch | O | https://github.com/aogog/SE2/tree/P1|
 | Checkout | O | .md파일 5번째 설명|
 | Clone | O | .md 파일 9번째 설명|
