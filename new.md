@@ -22,7 +22,106 @@
 > ## 21. Escaping Characters  
 > ## 22. Characters You can Escape  
 > ## 23. HTML  
+# 1. Headings  
+To create a headings, add number signs(#) in front a word or pahse.
+- ## `The number of # is size!`  
+### Ex)  
+```
+# Heading level 1
+## Heading level 2
+### Heading level 3
+#### Heading level 4
+##### Heading level 5
+###### Heading level 6
+```  
+### Result :  
+# Heading level 1  
+## Heading level 2  
+### Heading level 3  
+#### Heading level 4  
+##### Heading level 5  
+###### Heading level 6  
 ***
+- ## `Alternative Using ' == ' or ' -- '`  
+### Ex)  
+```
+Heading level 1        
+===============
+```
+### Result :  
+&nbsp;Heading level 1
+===============  
+
+### Ex)  
+```  
+Heading level 2        
+---------------
+```  
+
+### Result :  
+&nbsp;Heading level 2
+---------------  
+
+* * *
+# 2. Paragraphs  
+To create paragraphs, use a blank line to separte one or more lines of text.  
+### Ex)  
+```
+I like computer  
+
+I like game  
+```  
+### Result :  
+&nbsp;I line computer.  
+
+&nbsp;I like game.  
+
+* * *
+# 3. Line Breaks  
+To create a line break, end a line with **two or more spaces**, and then type return.  
+### Ex)  
+```
+This is the first line.  
+And this is the second line.
+```  
+### Result :  
+&nbsp;This is the first line.  
+&nbsp;This is the second line.
+
+* * *
+# 4. Bold  
+To bold text, add two asterisks(\*) or underscores(\_) before and after a word or phase.
+```
+This text is **really** important.  
+This text is __really__ important.  
+```
+### Result :    
+&nbsp;This text is **really** important.  
+&nbsp;This text is __really__ important.  
+
+* * *
+# 5. Italic
+To italicize text, add one asterisks(\*) or underscores(\_) before and after a word or phase.
+### Ex)  
+```
+This is a *test* line.   
+This is a _test_ line.   
+```  
+### Result :  
+&nbsp;This is a *test* line.  
+&nbsp;This is a _test_ line.  
+* * *
+# 6. Bold & Italic  
+To emphasize text with bold and italics at the same time, add three asterisks(\*) or underscores(\_) before and after a word or phrase.  
+### Ex)  
+```
+This is a ***test line***.
+```  
+
+### Result :  
+&nbsp;This is a ***test line***.  
+
+* * *
 # 7. Blockquotes  
 To create a blockquote, add a > in front of a paragraph  
 ### Ex)  
